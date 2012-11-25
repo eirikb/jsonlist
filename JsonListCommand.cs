@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Reflection;
 using ManyConsole;
 using NLog;
 using NLog.Config;
@@ -11,14 +9,6 @@ namespace Eirikb.SharePoint.JSONList
     {
         protected JsonListCommand()
         {
-            HasOption("v|version", "Print version", s =>
-                {
-                    // http://stackoverflow.com/a/909583
-                    var assembly = Assembly.GetExecutingAssembly();
-                    var fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-                    Console.WriteLine("Version: {0}", fvi.ProductVersion);
-                });
-
             HasOption("ll|logLevel=", "Set LogLevel for NLog (Warn, Info, Debug)", u =>
                 {
                     try
