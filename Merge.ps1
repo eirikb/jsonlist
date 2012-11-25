@@ -1,0 +1,1 @@
+C:\Chocolatey\bin\ILMerge.bat bin\release\jsonlist.exe /out:jsonlist.exe /wildcards bin\release\*.dll;
